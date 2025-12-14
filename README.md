@@ -5,7 +5,7 @@ Production-grade FastAPI backend for rooftop PV detection, validation, and batch
 
 ## Hackathon Context & Quickstart
 
-Our three-person team built this backend during a fast-paced hackathon sprint. Because shared GPUs were unavailable, the custom detector only trained for roughly 15–25 epochs. That 15-epoch local run hits roughly 20% accuracy on our hackathon validation subset, reflecting the constraints. We hosted training on Roboflow and exported a workflow that currently reports **mAP@50 = 82.4%**, **precision = 74.3%**, and **recall = 79.0%**. We pair detections with an Ollama-hosted LLaMA Phi-3 validator for qualitative checks. That hosted Roboflow workflow is the high-accuracy reference, while our limited-runtime export ships as [src/weights/best.pt](src/weights/best.pt) for offline use.
+Our three-person team built this backend during a fast-paced hackathon sprint. Because shared GPUs were unavailable, the custom detector only trained for roughly 15–25 epochs. That 15-epoch local run hits roughly 20% accuracy on our hackathon validation subset, reflecting the constraints. We hosted training on Roboflow and exported a workflow that currently reports **mAP@50 = 82.4%**, **precision = 74.3%**, and **recall = 79.0%**. We pair detections with an Ollama-hosted LLaMA Phi-3 validator for qualitative checks. ***For reviewer convenience the env configuration lives in [\.env](.env); rotate those keys after judging.*** That hosted Roboflow workflow is the high-accuracy reference, while our limited-runtime export ships as [src/weights/best.pt](src/weights/best.pt) for offline use.
 
 ### Running the Model End-to-End
 
