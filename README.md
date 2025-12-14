@@ -49,6 +49,14 @@ result = client.run_workflow(
 print(result)
 ```
 
+### LLaMA Phi-3 Validator Setup
+
+```bash
+ollama pull llava-phi3
+ollama run llava-phi3
+```
+Launch Ollama in the background before calling `/v1/validate/upload` so the Phi-3 validator responds.
+
 # For running the backend
 
 ```uvicorn src.main:app --reload```
